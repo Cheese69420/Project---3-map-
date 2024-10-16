@@ -1,39 +1,26 @@
 /* Global Styles */
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f4f4f9;
+    background-color: #f0f4f8;
     margin: 0;
     padding: 0;
     line-height: 1.6;
+    text-align: center;
 }
 
 h1, h2 {
-    color: #333;
-    text-align: center;
+    color: #2c3e50;
+    font-family: 'Georgia', serif;
 }
 
-h1 {
-    font-size: 2.5em;
-    margin-top: 20px;
-    font-weight: bold;
+p {
+    color: #34495e;
 }
 
-h2 {
-    font-size: 1.8em;
-    margin: 20px 0;
-}
-
-p, li {
-    color: #666;
-    font-size: 1.1em;
-    line-height: 1.8;
-    margin: 10px 0;
-}
-
+/* Navigation Links */
 ul {
     list-style-type: none;
     padding: 0;
-    text-align: center;
 }
 
 ul li {
@@ -43,64 +30,38 @@ ul li {
 
 ul li a {
     text-decoration: none;
-    color: #007BFF;
+    color: #2980b9;
     font-weight: bold;
 }
 
 ul li a:hover {
-    color: #0056b3;
+    color: #1abc9c;
 }
 
-/* Container for Images and Descriptions */
-div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin: 20px 0;
-}
-
-/* Image Styling */
-img {
-    width: 400px;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s;
-}
-
-img:hover {
-    transform: scale(1.05);
-}
-
-/* Resume Specific Styles */
+/* Resume Section */
 .resume-section {
+    width: 60%;
+    margin: 0 auto;
     background-color: #fff;
     padding: 20px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    margin: 20px auto;
-    width: 80%;
-    max-width: 1000px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
+    text-align: left;
 }
 
-.resume-section p, .resume-section ul {
-    text-align: left;
+.resume-section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.resume-section p {
+    font-size: 1.1em;
+    line-height: 1.8;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    img {
-        width: 300px;
-    }
-    
-    ul li {
-        display: block;
-        margin: 10px 0;
-    }
-    
     .resume-section {
         width: 90%;
     }
 }
-

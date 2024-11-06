@@ -1,4 +1,3 @@
-/* ===== Global Styles ===== */
 body {
     font-family: 'Verdana', sans-serif;
     background-color: #eaeaea;
@@ -8,19 +7,14 @@ body {
     text-align: center;
 }
 
-/* Header Styles */
 h1, h2 {
     color: #34495e;
     font-family: 'Courier New', monospace;
 }
 
-/* Paragraph Styles */
 p {
     color: #2c3e50;
     font-size: 1.1em;
-    width: 60%;
-    margin: 0 auto;
-    text-align: left;
 }
 
 /* Navigation Links */
@@ -44,8 +38,8 @@ ul li a:hover {
     color: #e74c3c;
 }
 
-/* Image Gallery Styles for Games */
-.games div {
+/* Image Gallery Styles */
+div {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -53,7 +47,7 @@ ul li a:hover {
     margin: 20px 0;
 }
 
-.games div img {
+div img {
     width: 350px;
     height: auto;
     border-radius: 10px;
@@ -62,51 +56,24 @@ ul li a:hover {
     transition: transform 0.3s ease-in-out;
 }
 
-.games div img:hover {
+div img:hover {
     transform: scale(1.05);
 }
 
-/* Resume Section Styles */
-.resume-section {
+p {
     width: 60%;
     margin: 0 auto;
-    background-color: #fff;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
     text-align: left;
-}
-
-.resume-section h2 {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.resume-section p {
-    font-size: 1.1em;
-    line-height: 1.8;
-}
-
-/* Song Section Styles */
-.songs iframe {
-    margin: 20px 0;
-    border: 5px solid #8e44ad;
-    border-radius: 10px;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .games div img,
-    .resume-section,
-    .songs p {
-        width: 90%;
+    div img {
+        width: 250px;
     }
-
-    .games p {
+    
+    p {
         width: 90%;
-    }
-
-    .songs iframe {
-        width: 100%;
     }
 }
+

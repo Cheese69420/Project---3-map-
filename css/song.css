@@ -1,0 +1,64 @@
+/* Global Styles */
+body {
+    font-family: 'Helvetica', sans-serif;
+    background-color: #fefefe;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+}
+
+h1, h2 {
+    color: #8e44ad;
+    font-family: 'Arial Black', sans-serif;
+}
+
+p {
+    color: #7f8c8d;
+    font-size: 1.2em;
+}
+
+/* Navigation Links */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+ul li a {
+    text-decoration: none;
+    color: #c0392b;
+    font-weight: bold;
+}
+
+ul li a:hover {
+    color: #d35400;
+}
+
+/* Styling for YouTube Video */
+iframe {
+    margin: 20px 0;
+    border: 5px solid #8e44ad;
+    border-radius: 10px;
+}
+
+/* Song Description Styling */
+p {
+    width: 70%;
+    margin: 0 auto;
+    text-align: left;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    p {
+        width: 90%;
+    }
+    
+    iframe {
+        width: 100%;
+    }
+}

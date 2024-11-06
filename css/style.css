@@ -1,186 +1,108 @@
-/* Reset styles (reset.css should be linked first in your HTML file) */
-body, h1, h2, p, ul, li, div, iframe {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-ul {
-    list-style-type: none;
-}
-a {
-    text-decoration: none;
-    color: inherit;
-}
-img {
-    max-width: 100%;
-    height: auto;
-}
-iframe {
-    border: none;
-}
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
-/* ====== General Styles ====== */
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    text-align: center;
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  padding: 1rem;
 }
 
-/* ====== Games Section ====== */
-.games-page {
-    background-color: #eaeaea;
-}
-
-.games-page h1, .games-page h2 {
-    color: #34495e;
-    font-family: 'Courier New', monospace;
-}
-
-.games-page p {
-    color: #2c3e50;
-    font-size: 1.1em;
-    width: 60%;
+img {
+    max-width: 50%;
+    height: auto;
     margin: 0 auto;
-    text-align: left;
+    display: block;
 }
 
-.games-page ul li {
-    display: inline;
-    margin: 0 20px;
+h1 {
+  text-align: center;
+  font-size: 2em;
 }
 
-.games-page ul li a {
-    color: #3498db;
-    font-weight: bold;
+h2 {
+  font-size: 1.5em;
+  margin-top: 1.5em;
 }
 
-.games-page ul li a:hover {
-    color: #e74c3c;
+ul.nav {
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+  padding: 1em;
+  background-color: #f8f8f8;
 }
 
-.games-page div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+iframe {
+  border: none;
+}
+
+ul.nav li a {
+  text-decoration: none;
+  color: #007acc;
+  font-weight: bold;
+}
+
+p,
+li {
+  font-size: 1em;
+  margin-bottom: 0.5em;
+}
+
+img {
+  border-radius: 5px;
+}
+
+section {
+  margin: 2em 0;
+}
+
+#resume p {
+  font-size: 1.1em;
+}
+
+#aboutMe section {
+  background-color: #f0f4f8;
+  padding: 1em;
+  border-radius: 10px;
+}
+
+#places section {
+  padding: 1em;
+  background-color: #e8f8e8;
+  border: 1px solid #d0f0d0;
+  border-radius: 8px;
+}
+
+#games,
+#song {
+  max-width: 90vw;
+  margin: 0 auto;
+}
+
+#resume {
+  width: 800px;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+p {
+  font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+  ul.nav {
     flex-direction: column;
-    margin: 20px 0;
-}
+    align-items: center;
+  }
 
-.games-page div img {
-    width: 350px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    margin-bottom: 20px;
-    transition: transform 0.3s ease-in-out;
-}
-
-.games-page div img:hover {
-    transform: scale(1.05);
-}
-
-@media (max-width: 768px) {
-    .games-page div img {
-        width: 250px;
-    }
-    .games-page p {
-        width: 90%;
-    }
-}
-
-/* ====== Resume Section ====== */
-.resume-page {
-    background-color: #f0f4f8;
-}
-
-.resume-page h1, .resume-page h2 {
-    color: #2c3e50;
-    font-family: 'Georgia', serif;
-}
-
-.resume-page ul li {
-    display: inline;
-    margin: 0 15px;
-}
-
-.resume-page ul li a {
-    color: #2980b9;
-    font-weight: bold;
-}
-
-.resume-page ul li a:hover {
-    color: #1abc9c;
-}
-
-.resume-page .resume-section {
-    width: 60%;
-    margin: 0 auto;
-    background-color: #fff;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    text-align: left;
-}
-
-.resume-page .resume-section h2 {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.resume-page .resume-section p {
-    font-size: 1.1em;
-    line-height: 1.8;
-}
-
-@media (max-width: 768px) {
-    .resume-page .resume-section {
-        width: 90%;
-    }
-}
-
-/* ====== Song Section ====== */
-.song-page {
-    background-color: #fefefe;
-    padding: 20px;
-}
-
-.song-page h1, .song-page h2 {
-    color: #8e44ad;
-    font-family: 'Arial Black', sans-serif;
-}
-
-.song-page p {
-    color: #7f8c8d;
-    font-size: 1.2em;
-    width: 70%;
-    margin: 0 auto;
-    text-align: left;
-}
-
-.song-page ul li {
-    display: inline;
-    margin: 0 10px;
-}
-
-.song-page ul li a {
-    color: #c0392b;
-    font-weight: bold;
-}
-
-.song-page ul li a:hover {
-    color: #d35400;
-}
-
-.song-page iframe {
-    margin: 20px 0;
-    border: 5px solid #8e44ad;
-    border-radius: 10px;
-}
-
-@media (max-width: 768px) {
-    .song-page p {
-        width: 90%;
-    }
-    .song-page iframe {
-        width: 100%;
-    }
+  #resume {
+    width: 90vw;
+  }
 }

@@ -1,108 +1,112 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
-
+/* ===== Global Styles ===== */
 body {
-  font-family: 'Roboto', sans-serif;
-  line-height: 1.6;
-  color: #333;
-  padding: 1rem;
+    font-family: 'Verdana', sans-serif;
+    background-color: #eaeaea;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    text-align: center;
 }
 
-img {
-    max-width: 50%;
-    height: auto;
-    margin: 0 auto;
-    display: block;
+/* Header Styles */
+h1, h2 {
+    color: #34495e;
+    font-family: 'Courier New', monospace;
 }
 
-h1 {
-  text-align: center;
-  font-size: 2em;
-}
-
-h2 {
-  font-size: 1.5em;
-  margin-top: 1.5em;
-}
-
-ul.nav {
-  display: flex;
-  justify-content: center;
-  gap: 1em;
-  padding: 1em;
-  background-color: #f8f8f8;
-}
-
-iframe {
-  border: none;
-}
-
-ul.nav li a {
-  text-decoration: none;
-  color: #007acc;
-  font-weight: bold;
-}
-
-p,
-li {
-  font-size: 1em;
-  margin-bottom: 0.5em;
-}
-
-img {
-  border-radius: 5px;
-}
-
-section {
-  margin: 2em 0;
-}
-
-#resume p {
-  font-size: 1.1em;
-}
-
-#aboutMe section {
-  background-color: #f0f4f8;
-  padding: 1em;
-  border-radius: 10px;
-}
-
-#places section {
-  padding: 1em;
-  background-color: #e8f8e8;
-  border: 1px solid #d0f0d0;
-  border-radius: 8px;
-}
-
-#games,
-#song {
-  max-width: 90vw;
-  margin: 0 auto;
-}
-
-#resume {
-  width: 800px;
-  margin: 0 auto;
-}
-
-h1 {
-  font-size: 2.5rem;
-}
-
-h2 {
-  font-size: 2rem;
-}
-
+/* Paragraph Styles */
 p {
-  font-size: 1rem;
+    color: #2c3e50;
+    font-size: 1.1em;
+    width: 60%;
+    margin: 0 auto;
+    text-align: left;
 }
 
-@media (max-width: 768px) {
-  ul.nav {
-    flex-direction: column;
-    align-items: center;
-  }
+/* Navigation Links */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
 
-  #resume {
-    width: 90vw;
-  }
+ul li {
+    display: inline;
+    margin: 0 20px;
+}
+
+ul li a {
+    text-decoration: none;
+    color: #3498db;
+    font-weight: bold;
+}
+
+ul li a:hover {
+    color: #e74c3c;
+}
+
+/* Image Gallery Styles for Games */
+.games div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 20px 0;
+}
+
+.games div img {
+    width: 350px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    margin-bottom: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.games div img:hover {
+    transform: scale(1.05);
+}
+
+/* Resume Section Styles */
+.resume-section {
+    width: 60%;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: left;
+}
+
+.resume-section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.resume-section p {
+    font-size: 1.1em;
+    line-height: 1.8;
+}
+
+/* Song Section Styles */
+.songs iframe {
+    margin: 20px 0;
+    border: 5px solid #8e44ad;
+    border-radius: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .games div img,
+    .resume-section,
+    .songs p {
+        width: 90%;
+    }
+
+    .games p {
+        width: 90%;
+    }
+
+    .songs iframe {
+        width: 100%;
+    }
 }

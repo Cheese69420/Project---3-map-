@@ -1,41 +1,25 @@
-/* Import Google Font */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
-
-/* Reset */
-*,
-*::before,
-*::after {
+/* Global Styles for all pages */
+body {
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    line-height: 1.6;
 }
 
-/* Global Styles */
-body {
-    font-family: 'Roboto', sans-serif;
+/* ===== #places Section Styles ===== */
+#places {
+    font-family: 'Verdana', sans-serif;
     background-color: #eaeaea;
-    line-height: 1.6;
-    color: #333;
     text-align: center;
     padding: 1rem;
 }
 
-/* Header Styles */
-h1, h2 {
+#places h1, #places h2 {
     color: #34495e;
+    font-family: 'Courier New', monospace;
 }
 
-h1 {
-    font-size: 2.5rem;
-}
-
-h2 {
-    font-size: 2rem;
-    margin-top: 1.5em;
-}
-
-/* Paragraph Styles */
-p {
+#places p {
     color: #2c3e50;
     font-size: 1.1em;
     width: 60%;
@@ -43,32 +27,29 @@ p {
     text-align: left;
 }
 
-/* Navigation Links */
-ul.nav {
-    display: flex;
-    justify-content: center;
-    gap: 1em;
-    padding: 1em;
-    background-color: #f8f8f8;
+/* Navigation Links for #places section only */
+#places ul {
     list-style-type: none;
+    padding: 0;
 }
 
-ul.nav li {
+#places ul li {
+    display: inline;
     margin: 0 20px;
 }
 
-ul.nav li a {
+#places ul li a {
     text-decoration: none;
     color: #3498db;
     font-weight: bold;
 }
 
-ul.nav li a:hover {
+#places ul li a:hover {
     color: #e74c3c;
 }
 
-/* Image Gallery Styles for Games */
-div.games {
+/* Image Gallery Styles within #places */
+#places div {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -76,7 +57,7 @@ div.games {
     margin: 20px 0;
 }
 
-div.games img {
+#places div img {
     width: 350px;
     height: auto;
     border-radius: 10px;
@@ -85,47 +66,17 @@ div.games img {
     transition: transform 0.3s ease-in-out;
 }
 
-div.games img:hover {
+#places div img:hover {
     transform: scale(1.05);
 }
 
-/* Resume Section */
-#resume {
-    width: 800px;
-    margin: 0 auto;
-}
-
-#resume p {
-    font-size: 1.1em;
-    line-height: 1.8;
-}
-
-/* About Me Section */
-#aboutMe section {
-    background-color: #f0f4f8;
-    padding: 1em;
-    border-radius: 10px;
-}
-
-/* Places Section */
-#places section {
-    padding: 1em;
-    background-color: #e8f8e8;
-    border: 1px solid #d0f0d0;
-    border-radius: 8px;
-    margin: 2em 0;
-}
-
-/* Responsive Design */
+/* Responsive Design for #places section */
 @media (max-width: 768px) {
-    ul.nav {
-        flex-direction: column;
-        align-items: center;
+    #places div img {
+        width: 250px;
     }
 
-    #resume,
-    div.games img,
-    p {
+    #places p {
         width: 90%;
     }
 }

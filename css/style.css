@@ -1,6 +1,4 @@
-/* styles.css */
 
-/* ===== Global Styles ===== */
 body {
     font-family: 'Verdana', sans-serif;
     background-color: #eaeaea;
@@ -10,13 +8,11 @@ body {
     text-align: center;
 }
 
-/* Headings for all sections */
 h1, h2 {
     color: #34495e;
     font-family: 'Courier New', monospace;
 }
 
-/* Paragraph styling for all sections */
 p {
     color: #2c3e50;
     font-size: 1.1em;
@@ -43,7 +39,7 @@ ul li a:hover {
     color: #e74c3c;
 }
 
-/* ===== Games Section ===== */
+/* Image Gallery Styles */
 div {
     display: flex;
     justify-content: center;
@@ -71,7 +67,7 @@ p {
     text-align: left;
 }
 
-/* Games Section Responsive */
+/* Responsive Design */
 @media (max-width: 768px) {
     div img {
         width: 250px;
@@ -82,17 +78,47 @@ p {
     }
 }
 
-/* ===== Resume Section ===== */
-body.resume-page {
+
+body {
     font-family: 'Arial', sans-serif;
     background-color: #f0f4f8;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    text-align: center;
 }
 
-h1, h2.resume-heading {
+h1, h2 {
     color: #2c3e50;
     font-family: 'Georgia', serif;
 }
 
+p {
+    color: #34495e;
+}
+
+/* Navigation Links */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+ul li a {
+    text-decoration: none;
+    color: #2980b9;
+    font-weight: bold;
+}
+
+ul li a:hover {
+    color: #1abc9c;
+}
+
+/* Resume Section */
 .resume-section {
     width: 60%;
     margin: 0 auto;
@@ -113,31 +139,51 @@ h1, h2.resume-heading {
     line-height: 1.8;
 }
 
-/* Resume Section Responsive */
+/* Responsive Design */
 @media (max-width: 768px) {
     .resume-section {
         width: 90%;
     }
 }
 
-/* ===== Song Section ===== */
-body.song-page {
+
+body {
     font-family: 'Helvetica', sans-serif;
     background-color: #fefefe;
+    margin: 0;
     padding: 20px;
+    text-align: center;
 }
 
-h1, h2.song-heading {
+h1, h2 {
     color: #8e44ad;
     font-family: 'Arial Black', sans-serif;
 }
 
-p.song-description {
+p {
     color: #7f8c8d;
     font-size: 1.2em;
-    width: 70%;
-    margin: 0 auto;
-    text-align: left;
+}
+
+/* Navigation Links */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+ul li a {
+    text-decoration: none;
+    color: #c0392b;
+    font-weight: bold;
+}
+
+ul li a:hover {
+    color: #d35400;
 }
 
 /* Styling for YouTube Video */
@@ -147,13 +193,20 @@ iframe {
     border-radius: 10px;
 }
 
-/* Song Section Responsive */
+/* Song Description Styling */
+p {
+    width: 70%;
+    margin: 0 auto;
+    text-align: left;
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
-    p.song-description {
+    p {
         width: 90%;
     }
     
     iframe {
         width: 100%;
     }
-}
+} merge all these together but make sure the code wroks the same as before just all on one css file and also make me a reset css file

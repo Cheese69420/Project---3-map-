@@ -6,7 +6,7 @@ body {
     padding: 0;
     line-height: 1.6;
     text-align: center;
-}  
+}
 
 h1, h2 {
     color: #34495e;
@@ -16,27 +16,6 @@ h1, h2 {
 p {
     color: #2c3e50;
     font-size: 1.1em;
-}
-
-/* Navigation Links - Consistent across all pages */
-ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-ul li {
-    display: inline;
-    margin: 0 20px;
-}
-
-ul li a {
-    text-decoration: none;
-    color: #3498db;
-    font-weight: bold;
-}
-
-ul li a:hover {
-    color: #e74c3c;
 }
 
 /* Specific styles for each page */
@@ -68,6 +47,53 @@ body.song h1, body.song h2 {
 body.song p {
     color: #7f8c8d;
     font-size: 1.2em;
+}
+
+/* Navigation Links */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    display: inline;
+    margin: 0 20px;
+}
+
+ul li a {
+    text-decoration: none;
+    color: #3498db;
+    font-weight: bold;
+}
+
+ul li a:hover {
+    color: #e74c3c;
+}
+
+/* Resume Navigation Links */
+body.resume ul li {
+    margin: 0 15px;
+}
+
+body.resume ul li a {
+    color: #2980b9;
+}
+
+body.resume ul li a:hover {
+    color: #1abc9c;
+}
+
+/* Songs Navigation Links */
+body.song ul li {
+    margin: 0 10px;
+}
+
+body.song ul li a {
+    color: #c0392b;
+}
+
+body.song ul li a:hover {
+    color: #d35400;
 }
 
 /* Image Gallery Styles */

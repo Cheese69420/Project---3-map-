@@ -1,90 +1,159 @@
-/* General Styles */
+/* styles.css */
+
+/* ===== Global Styles ===== */
 body {
-  font-family: 'Roboto', sans-serif;
-  line-height: 1.6;
-  color: #333;
-  padding: 1rem;
+    font-family: 'Verdana', sans-serif;
+    background-color: #eaeaea;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    text-align: center;
 }
 
-img {
-  max-width: 50%;
-  height: auto;
-  margin: 0 auto;
-  display: block;
-  border-radius: 5px;
+/* Headings for all sections */
+h1, h2 {
+    color: #34495e;
+    font-family: 'Courier New', monospace;
 }
 
-h1 {
-  text-align: center;
-  font-size: 2.5rem;
+/* Paragraph styling for all sections */
+p {
+    color: #2c3e50;
+    font-size: 1.1em;
 }
 
-h2 {
-  font-size: 2rem;
-  margin-top: 1.5em;
+/* Navigation Links */
+ul {
+    list-style-type: none;
+    padding: 0;
 }
 
-ul.nav {
-  display: flex;
-  justify-content: center;
-  gap: 1em;
-  padding: 1em;
-  background-color: #f8f8f8;
+ul li {
+    display: inline;
+    margin: 0 20px;
 }
 
-ul.nav li a {
-  text-decoration: none;
-  color: #007acc;
-  font-weight: bold;
+ul li a {
+    text-decoration: none;
+    color: #3498db;
+    font-weight: bold;
 }
 
-p,
-li {
-  font-size: 1rem;
-  margin-bottom: 0.5em;
+ul li a:hover {
+    color: #e74c3c;
 }
 
-section {
-  margin: 2em 0;
-}
-
-/* Page-specific styles */
-#resume {
-  background-color: #e0f7fa;
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 2rem;
-  border-radius: 8px;
-}
-
-#resume p {
-  font-size: 1.1em;
-}
-
-#aboutMe {
-  background-color: #f3e5f5;
-  padding: 2rem;
-  border-radius: 8px;
-  max-width: 90vw;
-  margin: 0 auto;
-}
-
-#places {
-  background-color: #fff3e0;
-  padding: 2rem;
-  border-radius: 8px;
-  max-width: 90vw;
-  margin: 0 auto;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  ul.nav {
-    flex-direction: column;
+/* ===== Games Section ===== */
+div {
+    display: flex;
+    justify-content: center;
     align-items: center;
-  }
+    flex-direction: column;
+    margin: 20px 0;
+}
 
-  #resume {
-    width: 90vw;
-  }
+div img {
+    width: 350px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    margin-bottom: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+div img:hover {
+    transform: scale(1.05);
+}
+
+p {
+    width: 60%;
+    margin: 0 auto;
+    text-align: left;
+}
+
+/* Games Section Responsive */
+@media (max-width: 768px) {
+    div img {
+        width: 250px;
+    }
+    
+    p {
+        width: 90%;
+    }
+}
+
+/* ===== Resume Section ===== */
+body.resume-page {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f4f8;
+}
+
+h1, h2.resume-heading {
+    color: #2c3e50;
+    font-family: 'Georgia', serif;
+}
+
+.resume-section {
+    width: 60%;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: left;
+}
+
+.resume-section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.resume-section p {
+    font-size: 1.1em;
+    line-height: 1.8;
+}
+
+/* Resume Section Responsive */
+@media (max-width: 768px) {
+    .resume-section {
+        width: 90%;
+    }
+}
+
+/* ===== Song Section ===== */
+body.song-page {
+    font-family: 'Helvetica', sans-serif;
+    background-color: #fefefe;
+    padding: 20px;
+}
+
+h1, h2.song-heading {
+    color: #8e44ad;
+    font-family: 'Arial Black', sans-serif;
+}
+
+p.song-description {
+    color: #7f8c8d;
+    font-size: 1.2em;
+    width: 70%;
+    margin: 0 auto;
+    text-align: left;
+}
+
+/* Styling for YouTube Video */
+iframe {
+    margin: 20px 0;
+    border: 5px solid #8e44ad;
+    border-radius: 10px;
+}
+
+/* Song Section Responsive */
+@media (max-width: 768px) {
+    p.song-description {
+        width: 90%;
+    }
+    
+    iframe {
+        width: 100%;
+    }
 }

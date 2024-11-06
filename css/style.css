@@ -1,46 +1,64 @@
-
-body {
-    font-family: 'Verdana', sans-serif;
-    background-color: #eaeaea;
+/* Reset styles (reset.css should be linked first in your HTML file) */
+body, h1, h2, p, ul, li, div, iframe {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+ul {
+    list-style-type: none;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+iframe {
+    border: none;
+}
+
+/* ====== General Styles ====== */
+body {
+    font-family: Arial, sans-serif;
     line-height: 1.6;
     text-align: center;
 }
 
-h1, h2 {
+/* ====== Games Section ====== */
+.games-page {
+    background-color: #eaeaea;
+}
+
+.games-page h1, .games-page h2 {
     color: #34495e;
     font-family: 'Courier New', monospace;
 }
 
-p {
+.games-page p {
     color: #2c3e50;
     font-size: 1.1em;
+    width: 60%;
+    margin: 0 auto;
+    text-align: left;
 }
 
-/* Navigation Links */
-ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-ul li {
+.games-page ul li {
     display: inline;
     margin: 0 20px;
 }
 
-ul li a {
-    text-decoration: none;
+.games-page ul li a {
     color: #3498db;
     font-weight: bold;
 }
 
-ul li a:hover {
+.games-page ul li a:hover {
     color: #e74c3c;
 }
 
-/* Image Gallery Styles */
-div {
+.games-page div {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -48,78 +66,52 @@ div {
     margin: 20px 0;
 }
 
-div img {
+.games-page div img {
     width: 350px;
-    height: auto;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     margin-bottom: 20px;
     transition: transform 0.3s ease-in-out;
 }
 
-div img:hover {
+.games-page div img:hover {
     transform: scale(1.05);
 }
 
-p {
-    width: 60%;
-    margin: 0 auto;
-    text-align: left;
-}
-
-/* Responsive Design */
 @media (max-width: 768px) {
-    div img {
+    .games-page div img {
         width: 250px;
     }
-    
-    p {
+    .games-page p {
         width: 90%;
     }
 }
 
-
-body {
-    font-family: 'Arial', sans-serif;
+/* ====== Resume Section ====== */
+.resume-page {
     background-color: #f0f4f8;
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
-    text-align: center;
 }
 
-h1, h2 {
+.resume-page h1, .resume-page h2 {
     color: #2c3e50;
     font-family: 'Georgia', serif;
 }
 
-p {
-    color: #34495e;
-}
-
-/* Navigation Links */
-ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-ul li {
+.resume-page ul li {
     display: inline;
     margin: 0 15px;
 }
 
-ul li a {
-    text-decoration: none;
+.resume-page ul li a {
     color: #2980b9;
     font-weight: bold;
 }
 
-ul li a:hover {
+.resume-page ul li a:hover {
     color: #1abc9c;
 }
 
-/* Resume Section */
-.resume-section {
+.resume-page .resume-section {
     width: 60%;
     margin: 0 auto;
     background-color: #fff;
@@ -129,84 +121,66 @@ ul li a:hover {
     text-align: left;
 }
 
-.resume-section h2 {
+.resume-page .resume-section h2 {
     text-align: center;
     margin-bottom: 20px;
 }
 
-.resume-section p {
+.resume-page .resume-section p {
     font-size: 1.1em;
     line-height: 1.8;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
-    .resume-section {
+    .resume-page .resume-section {
         width: 90%;
     }
 }
 
-
-body {
-    font-family: 'Helvetica', sans-serif;
+/* ====== Song Section ====== */
+.song-page {
     background-color: #fefefe;
-    margin: 0;
     padding: 20px;
-    text-align: center;
 }
 
-h1, h2 {
+.song-page h1, .song-page h2 {
     color: #8e44ad;
     font-family: 'Arial Black', sans-serif;
 }
 
-p {
+.song-page p {
     color: #7f8c8d;
     font-size: 1.2em;
-}
-
-/* Navigation Links */
-ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-ul li {
-    display: inline;
-    margin: 0 10px;
-}
-
-ul li a {
-    text-decoration: none;
-    color: #c0392b;
-    font-weight: bold;
-}
-
-ul li a:hover {
-    color: #d35400;
-}
-
-/* Styling for YouTube Video */
-iframe {
-    margin: 20px 0;
-    border: 5px solid #8e44ad;
-    border-radius: 10px;
-}
-
-/* Song Description Styling */
-p {
     width: 70%;
     margin: 0 auto;
     text-align: left;
 }
 
-/* Responsive Design */
+.song-page ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+.song-page ul li a {
+    color: #c0392b;
+    font-weight: bold;
+}
+
+.song-page ul li a:hover {
+    color: #d35400;
+}
+
+.song-page iframe {
+    margin: 20px 0;
+    border: 5px solid #8e44ad;
+    border-radius: 10px;
+}
+
 @media (max-width: 768px) {
-    p {
+    .song-page p {
         width: 90%;
     }
-    
-    iframe {
+    .song-page iframe {
         width: 100%;
     }
-} merge all these together but make sure the code wroks the same as before just all on one css file and also make me a reset css file
+}

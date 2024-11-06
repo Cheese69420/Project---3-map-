@@ -1,3 +1,4 @@
+/* General Styles */
 body {
   font-family: 'Roboto', sans-serif;
   line-height: 1.6;
@@ -6,19 +7,20 @@ body {
 }
 
 img {
-    max-width: 50%;
-    height: auto;
-    margin: 0 auto;
-    display: block;
+  max-width: 50%;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+  border-radius: 5px;
 }
 
 h1 {
   text-align: center;
-  font-size: 2em;
+  font-size: 2.5rem;
 }
 
 h2 {
-  font-size: 1.5em;
+  font-size: 2rem;
   margin-top: 1.5em;
 }
 
@@ -30,10 +32,6 @@ ul.nav {
   background-color: #f8f8f8;
 }
 
-iframe {
-  border: none;
-}
-
 ul.nav li a {
   text-decoration: none;
   color: #007acc;
@@ -42,58 +40,44 @@ ul.nav li a {
 
 p,
 li {
-  font-size: 1em;
+  font-size: 1rem;
   margin-bottom: 0.5em;
-}
-
-img {
-  border-radius: 5px;
 }
 
 section {
   margin: 2em 0;
 }
 
+/* Page-specific styles */
+#resume {
+  background-color: #e0f7fa;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  border-radius: 8px;
+}
+
 #resume p {
   font-size: 1.1em;
 }
 
-#aboutMe section {
-  background-color: #f0f4f8;
-  padding: 1em;
-  border-radius: 10px;
-}
-
-#places section {
-  padding: 1em;
-  background-color: #e8f8e8;
-  border: 1px solid #d0f0d0;
+#aboutMe {
+  background-color: #f3e5f5;
+  padding: 2rem;
   border-radius: 8px;
-}
-
-#aboutMe,
-#places {
   max-width: 90vw;
   margin: 0 auto;
 }
 
-#resume {
-  width: 800px;
+#places {
+  background-color: #fff3e0;
+  padding: 2rem;
+  border-radius: 8px;
+  max-width: 90vw;
   margin: 0 auto;
 }
 
-h1 {
-  font-size: 2.5rem;
-}
-
-h2 {
-  font-size: 2rem;
-}
-
-p {
-  font-size: 1rem;
-}
-
+/* Responsive Design */
 @media (max-width: 768px) {
   ul.nav {
     flex-direction: column;

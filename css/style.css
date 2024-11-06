@@ -100,15 +100,15 @@ div.games img:hover {
     line-height: 1.8;
 }
 
-/* About Me Section */
-#aboutMe section {
+/* game Section */
+#game section {
     background-color: #f0f4f8;
     padding: 1em;
     border-radius: 10px;
 }
 
-/* Places Section */
-#places section {
+/* song Section */
+#song section {
     padding: 1em;
     background-color: #e8f8e8;
     border: 1px solid #d0f0d0;

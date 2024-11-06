@@ -1,25 +1,41 @@
-/* Global Styles for all pages */
-body {
-    font-family: Arial, sans-serif;
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Reset */
+*,
+*::before,
+*::after {
     margin: 0;
     padding: 0;
-    line-height: 1.6;
+    box-sizing: border-box;
 }
 
-/* ===== #places Section Styles ===== */
-#places {
-    font-family: 'Verdana', sans-serif;
+/* Global Styles */
+body {
+    font-family: 'Roboto', sans-serif;
     background-color: #eaeaea;
+    line-height: 1.6;
+    color: #333;
     text-align: center;
     padding: 1rem;
 }
 
-#places h1, #places h2 {
+/* Header Styles */
+h1, h2 {
     color: #34495e;
-    font-family: 'Courier New', monospace;
 }
 
-#places p {
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-top: 1.5em;
+}
+
+/* Paragraph Styles */
+p {
     color: #2c3e50;
     font-size: 1.1em;
     width: 60%;
@@ -27,29 +43,32 @@ body {
     text-align: left;
 }
 
-/* Navigation Links for #places section only */
-#places ul {
+/* Navigation Links */
+ul.nav {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    padding: 1em;
+    background-color: #f8f8f8;
     list-style-type: none;
-    padding: 0;
 }
 
-#places ul li {
-    display: inline;
+ul.nav li {
     margin: 0 20px;
 }
 
-#places ul li a {
+ul.nav li a {
     text-decoration: none;
     color: #3498db;
     font-weight: bold;
 }
 
-#places ul li a:hover {
+ul.nav li a:hover {
     color: #e74c3c;
 }
 
-/* Image Gallery Styles within #places */
-#places div {
+/* Image Gallery Styles for Games */
+div.games {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -57,7 +76,7 @@ body {
     margin: 20px 0;
 }
 
-#places div img {
+div.games img {
     width: 350px;
     height: auto;
     border-radius: 10px;
@@ -66,17 +85,49 @@ body {
     transition: transform 0.3s ease-in-out;
 }
 
-#places div img:hover {
+div.games img:hover {
     transform: scale(1.05);
 }
 
-/* Responsive Design for #places section */
+/* Resume Section */
+#resume {
+    width: 800px;
+    margin: 0 auto;
+}
+
+#resume p {
+    font-size: 1.1em;
+    line-height: 1.8;
+}
+
+/* About Me Section */
+#aboutMe section {
+    background-color: #f0f4f8;
+    padding: 1em;
+    border-radius: 10px;
+}
+
+/* Places Section */
+#places section {
+    padding: 1em;
+    background-color: #e8f8e8;
+    border: 1px solid #d0f0d0;
+    border-radius: 8px;
+    margin: 2em 0;
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
-    #places div img {
-        width: 250px;
+    ul.nav {
+        flex-direction: column;
+        align-items: center;
     }
 
-    #places p {
+    #resume,
+    div.games img,
+    p {
         width: 90%;
     }
 }
+
+

@@ -1,3 +1,5 @@
+/* Merged Styles */
+
 /* Global Styles */
 body {
     font-family: 'Verdana', sans-serif;
@@ -8,45 +10,52 @@ body {
     text-align: center;
 }
 
+/* Override specific body backgrounds for each section */
+body.resume-section {
+    background-color: #f0f4f8;
+}
+
+body.songs-section {
+    background-color: #fefefe;
+}
+
+/* Headers */
 h1, h2 {
     color: #34495e;
     font-family: 'Courier New', monospace;
 }
 
-p {
-    color: #2c3e50;
-    font-size: 1.1em;
-}
-
-/* Specific styles for each page */
-body.resume {
-    font-family: 'Arial', sans-serif;
-    background-color: #f0f4f8;
-}
-
-body.resume h1, body.resume h2 {
+/* Override specific header styles for each section */
+.resume-section h1, .resume-section h2 {
     color: #2c3e50;
     font-family: 'Georgia', serif;
 }
 
-body.resume p {
-    color: #34495e;
-}
-
-body.song {
-    font-family: 'Helvetica', sans-serif;
-    background-color: #fefefe;
-    padding: 20px;
-}
-
-body.song h1, body.song h2 {
+.songs-section h1, .songs-section h2 {
     color: #8e44ad;
     font-family: 'Arial Black', sans-serif;
 }
 
-body.song p {
+/* Paragraph Styles */
+p {
+    color: #2c3e50;
+    font-size: 1.1em;
+    width: 60%;
+    margin: 0 auto;
+    text-align: left;
+}
+
+/* Override specific paragraph styles for each section */
+.resume-section p {
+    color: #34495e;
+    font-size: 1.1em;
+    line-height: 1.8;
+}
+
+.songs-section p {
     color: #7f8c8d;
     font-size: 1.2em;
+    width: 70%;
 }
 
 /* Navigation Links */
@@ -70,29 +79,24 @@ ul li a:hover {
     color: #e74c3c;
 }
 
-/* Resume Navigation Links */
-body.resume ul li {
-    margin: 0 15px;
-}
-
-body.resume ul li a {
+/* Override specific link colors for each section */
+.resume-section ul li a {
     color: #2980b9;
 }
 
-body.resume ul li a:hover {
+.resume-section ul li a:hover {
     color: #1abc9c;
 }
 
-/* Songs Navigation Links */
-body.song ul li {
+.songs-section ul li {
     margin: 0 10px;
 }
 
-body.song ul li a {
+.songs-section ul li a {
     color: #c0392b;
 }
 
-body.song ul li a:hover {
+.songs-section ul li a:hover {
     color: #d35400;
 }
 
@@ -134,20 +138,8 @@ div img:hover {
     margin-bottom: 20px;
 }
 
-.resume-section p {
-    font-size: 1.1em;
-    line-height: 1.8;
-}
-
-/* Song Description Styling */
-body.song p {
-    width: 70%;
-    margin: 0 auto;
-    text-align: left;
-}
-
-/* YouTube Video Styling */
-iframe {
+/* Song Section - YouTube Video Styling */
+.songs-section iframe {
     margin: 20px 0;
     border: 5px solid #8e44ad;
     border-radius: 10px;
@@ -158,16 +150,16 @@ iframe {
     div img {
         width: 250px;
     }
-    
+
     p {
         width: 90%;
     }
-    
+
     .resume-section {
         width: 90%;
     }
-    
-    iframe {
+
+    .songs-section iframe {
         width: 100%;
     }
 }

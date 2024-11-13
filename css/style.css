@@ -10,6 +10,61 @@
     box-sizing: border-box;
 }
 
+/* Sidebar Navigation */
+#navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 200px;
+    background-color: #333;
+    padding-top: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+    color: #fff;
+    z-index: 1000; /* Ensure sidebar is above other elements */
+}
+
+#navbar_container ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#navbar_container ul li {
+    padding: 10px;
+    text-align: left;
+}
+
+#navbar_container ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+}
+
+#navbar_container ul li a:hover {
+    background-color: #575757;
+    padding-left: 10px;
+}
+
+/* Main content adjustments for sidebar */
+body {
+    margin-left: 220px; /* Leave space for sidebar */
+    padding: 20px;
+}
+
+/* Centered map styling */
+#map {
+    width: 80%;
+    max-width: 600px;
+    height: 400px;
+    margin: 20px auto;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+
 /* Centering the Map Div */
 body {
     display: flex;

@@ -3,52 +3,84 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Map</title>
+    <title>map</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
-    <style>
-        /* Basic styling for the map container */
-        #map {
-            height: 500px;
-            width: 100%;
-            margin: 0 auto;
-        }
-    </style>
 </head>
-<body>
-    <h1>Our Location on Google Maps</h1>
-    <p>Explore our map with custom markers, infowindows, and different map styles.</p>
-	<body id="map">
-	<h2>Other Links</h2>
+<body id="map">
+    <header>
+        <nav id="navbar">
+            <div id="navbar_container">
+                <ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="page2.html">Songs</a></li>
+					<li><a href="page3.html">Games</a></li>
+					<li><a href="page4.html">Map</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <h2>Other Links</h2>
     <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="page2.html">Songs</a></li>
         <li><a href="page3.html">Games</a></li>
     </ul>
-    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
+
+    <button id="theme-toggle">Toggle Dark Mode</button>
+    <button id="scroll-top" style="display: none;">Top</button>
+
+    <div id="map"></div>
+
     <script>
+        // Dark Mode Toggle
+        document.getElementById('theme-toggle').addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+        });
+
+        // Scroll-to-Top Button
+        const scrollTopBtn = document.getElementById('scroll-top');
+
+        window.onscroll = function () {
+            scrollTopBtn.style.display = window.scrollY > 200 ? 'block' : 'none';
+        };
+
+        scrollTopBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Google Maps Initialization
         function initMap() {
-            const location = { lat: 41.8781, lng: -87.6298 }; 
             const map = new google.maps.Map(document.getElementById('map'), {
-                zoom: 10,
-                center: location,
-                mapTypeId: 'terrain' 
+                center: { lat: 41.8312, lng: -87.6272 },
+                zoom: 12,
             });
 
-            const marker = new google.maps.Marker({
-                position: location,
-                map: map,
-                title: "Chicago"
-            });
+            const locations = [
+                { position: { lat: 41.8779, lng: -87.6341 }, title: "Giordano's Pizza", info: "<h2>Giordano's Pizza</h2><p>This is one of my favorite pizza chains.</p>" },
+                { position: { lat: 41.8312, lng: -87.6272 }, title: "IIT", info: "<h2>IIT</h2><p>I currently attend IIT.</p>" },
+                { position: { lat: 41.8679, lng: -87.6141 }, title: "Shedd Aquarium", info: "<h2>Shedd Aquarium</h2><p>A beautiful aquarium.</p>" }
+            ];
 
-            const infoWindow = new google.maps.InfoWindow({
-                content: "<h2>Chicago</h2><p>This is our main location.</p>"
-            });
+            locations.forEach(({ position, title, info }) => {
+                const marker = new google.maps.Marker({
+                    position,
+                    map,
+                    title,
+                });
 
-            marker.addListener("click", () => {
-                infoWindow.open(map, marker);
+                const infoWindow = new google.maps.InfoWindow({
+                    content: info,
+                });
+
+                marker.addListener('click', () => {
+                    infoWindow.open(map, marker);
+                });
             });
         }
     </script>
+    
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBM1F-BpX660SBK3-Vw9O9f7AEvTAIH8rI&callback=initMap" async defer></script>
 </body>
 </html>

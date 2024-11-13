@@ -10,6 +10,90 @@
     box-sizing: border-box;
 }
 
+/* Base Styles (Existing) */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #eaeaea;
+    line-height: 1.6;
+    color: #333;
+    text-align: center;
+    padding: 1rem;
+}
+
+h1, h2 {
+    color: #34495e;
+}
+
+p {
+    color: #2c3e50;
+    font-size: 1.1em;
+    width: 60%;
+    margin: 0 auto;
+    text-align: left;
+}
+
+/* Image Gallery Styles */
+div.games img {
+    width: 350px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    margin-bottom: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+div.games img:hover {
+    transform: scale(1.05);
+}
+
+/* Min-width Media Queries */
+
+/* Media Query 1: Screens 600px and above */
+@media (min-width: 600px) {
+    body {
+        padding: 2rem;
+    }
+    h1 {
+        font-size: 3rem; /* Increase font size */
+    }
+    p {
+        width: 70%; /* Wider paragraph width */
+        font-size: 1.2em; /* Larger font size */
+        text-align: justify; /* Justify text for a cleaner look */
+    }
+    ul.nav {
+        gap: 1.5em; /* Increase gap between nav links */
+    }
+    div.games img {
+        width: 300px; /* Smaller image size */
+    }
+}
+
+/* Media Query 2: Screens 900px and above */
+@media (min-width: 900px) {
+    body {
+        padding: 3rem; /* Extra padding for large screens */
+    }
+    ul.nav {
+        flex-direction: row; /* Horizontal nav for larger screens */
+        gap: 2em; /* Extra spacing between links */
+    }
+    h1 {
+        font-size: 3.5rem; /* Further increase font size */
+        color: #2c3e50; /* Darker header color */
+    }
+    p {
+        width: 50%; /* Further reduce width */
+        font-size: 1.3em; /* Slightly larger text */
+        line-height: 1.8; /* More line height for readability */
+    }
+    div.games img {
+        width: 400px; /* Larger image size for big screens */
+        margin-bottom: 25px; /* More spacing below images */
+    }
+}
+
+
 /* Global Styles */
 body {
     font-family: 'Roboto', sans-serif;

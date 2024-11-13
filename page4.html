@@ -28,18 +28,13 @@
         <li><a href="page3.html">Games</a></li>
     </ul>
 
-    <button id="theme-toggle">Toggle Dark Mode</button>
-    <button id="scroll-top" style="display: none;">Top</button>
-
-    <div id="map"></div>
+    <div id="maps"></div>
 
     <script>
-        // Dark Mode Toggle
         document.getElementById('theme-toggle').addEventListener('click', () => {
             document.body.classList.toggle('dark-mode');
         });
 
-        // Scroll-to-Top Button
         const scrollTopBtn = document.getElementById('scroll-top');
 
         window.onscroll = function () {
@@ -50,7 +45,6 @@
             window.scrollTo({ top: 0, behavior: 'smooth' });
         });
 
-        // Google Maps Initialization
         function initMap() {
             const map = new google.maps.Map(document.getElementById('map'), {
                 center: { lat: 41.8312, lng: -87.6272 },
@@ -59,7 +53,7 @@
 
             const locations = [
                 { position: { lat: 41.7557, lng: -87.7423 }, title: "Best Buy", info: "<h2>Best Buy</h2><p>This is the place were I currently work.</p>" },
-                { position: { lat: 41.8312, lng: -87.6272 }, title: "IIT", info: "<h2>IIT</h2><p>This is the school I currently go to.</p>" },
+                { position: { lat: 41.8312, lng: -87.6272 }, title: "IIT", info: "<h2>IIT</h2><p>This is the school I currently go to..</p>" },
                 { position: { lat: 41.7460, lng: -87.7402 }, title: "Asian Buffet", info: "<h2>Asian Buffet</h2><p>This is a buffet me and my family go to alot we really like the food here.</p>" }
             ];
 

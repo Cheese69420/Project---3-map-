@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Basic styling for the map container */
+        #map {
+            height: 500px;
+            width: 100%;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Our Location on Google Maps</h1>
+    <p>Explore our map with custom markers, infowindows, and different map styles.</p>
+	<body id="map">
+	<h2>Other Links</h2>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="page2.html">Songs</a></li>
+        <li><a href="page3.html">Games</a></li>
+    </ul>
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
+    <script>
+        function initMap() {
+            const location = { lat: 41.8781, lng: -87.6298 }; 
+            const map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 10,
+                center: location,
+                mapTypeId: 'terrain' 
+            });
+
+            const marker = new google.maps.Marker({
+                position: location,
+                map: map,
+                title: "Chicago"
+            });
+
+            const infoWindow = new google.maps.InfoWindow({
+                content: "<h2>Chicago</h2><p>This is our main location.</p>"
+            });
+
+            marker.addListener("click", () => {
+                infoWindow.open(map, marker);
+            });
+        }
+    </script>
+</body>
+</html>
